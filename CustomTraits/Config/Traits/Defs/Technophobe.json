@@ -1,0 +1,25 @@
+{
+    // This is an example override of a trait you want to remove completely
+    "Id" : "Technophobe",
+    "IconId" : "Icons/Color/Leaf",
+    "TypeId" : "Intellectual",
+
+    // If you want to disable an existing trait, you can set Rarity to -1.
+    // Don't set it to 0, otherwise it will revert into 0.5!
+    "Rarity" : -1.0
+
+    // Once you set rarity to -1.0, you don't even have to keep the
+    // remaining stuff from the original JSON, so it's commented out.
+    // "IncompatibleTraitIds" : [
+    //     "Technophile"
+    // ],
+    // "AddsStatModifiers" : [
+    //     {
+    //         "Component" : "AIAlignment",
+    //         "Properties" : [
+    //             { "Key" : "Value", "Float" : -0.33 },
+    //             { "Key" : "Type", "String" : "Adds" }
+    //         ]
+    //     }
+    // ]
+}

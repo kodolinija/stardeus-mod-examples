@@ -1,0 +1,22 @@
+{
+    // This is an example of how to add a new trait
+    // Also see Translations/English.csv for an example how to add translations
+    // to the new trait.
+    // Note, if Id was OtakuPerson, the translation key would be come "trait.otaku_person"
+    // (camel case to snake case)
+    "Id" : "Otaku",
+    // Look into Core mod's Graphics/Icons folder to see what you can use
+    "IconId" : "Icons/Color/MoodGood",
+    "TypeId" : "Mental",
+    "Rarity" : 0.15,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Social",
+            "Adjustment" : -2
+        },
+        {
+            "JobId" : "Research",
+            "Adjustment" : 3
+        }
+    ]
+}

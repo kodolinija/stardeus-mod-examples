@@ -1,0 +1,21 @@
+{
+    // This is an example override of a trait that is role-only
+    "Id" : "CleaningOcd",
+    "IconId" : "Icons/Color/Sparkles",
+    "TypeId" : "Civilized",
+    // For traits with RoleOnly flag, Rarity field is ignored, if you want
+    // this trait to be more frequently encountered, you have to find
+    // roles that give this trait and override their rarity instead!
+    "TraitFlagIds" : [ "RoleOnly" ],
+    "Rarity" : 0.25,
+    "AdjustsSkills" : [
+        {
+            "JobId" : "Cleaning",
+            // Original value was 1, well set it to 3 to give more cleaning boost
+            "Adjustment" : 3
+        }
+    ],
+    "AddsNeeds" : [
+        "CleanFloors"
+    ]
+}

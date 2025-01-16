@@ -1,0 +1,24 @@
+{
+    // This is example of a trait override where we want the trait to be encountered
+    // more frequently
+    "Id" : "Technophile",
+    "IconId" : "Icons/Color/RobotEye",
+    "TypeId" : "Intellectual",
+    // Original rarity was 0.5, we'll make it 2.0, which will make it more frequent
+    // event compared to traits that have 1.0 rarity
+    "Rarity" : 2.0,
+    // We'll keep the rest of the file unchanged. If you would delete this part,
+    // it would not get copied from the original file, so the trait would become blank!
+    "IncompatibleTraitIds" : [
+        "Technophobe"
+    ],
+    "AddsStatModifiers" : [
+        {
+            "Component" : "AIAlignment",
+            "Properties" : [
+                { "Key" : "Value", "Float" : 0.33 },
+                { "Key" : "Type", "String" : "Adds" }
+            ]
+        }
+    ]
+}
