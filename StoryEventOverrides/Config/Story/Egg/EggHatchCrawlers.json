@@ -1,0 +1,23 @@
+
+{
+    "InterestFactor" : 0.2,
+    "Effect" : -0.3,
+    // Probability Bias was not defined in the original event, hence it was 0.0 (no bias)
+    // We will set the bias to a small positive float value, making this event occur more
+    // frequently
+    "ProbabilityBias" : 0.25,
+    "Min" : {
+        "Check" : true,
+
+        // Original sector difficulty was 0.3 (30%), we'll set it to 0.0, so
+        // crawlers will spawn from eggs everywhere
+        "SectorDifficulty" : 0.0,
+
+        // Original min days was 60, we'll comment it out so this condition will
+        // not exist
+        // "Days" : 60
+
+        // We will add minimum required number of "Colonists" instead
+        "Colonists" : 10
+    }
+}

@@ -1,0 +1,15 @@
+
+{
+    "InterestFactor" : 0.1,
+    "Effect" : -0.03,
+    // MinRepeatDelayDays was 30 in the original, we want this to happen less
+    // frequently, so we'll set this to 90
+    "MinRepeatDelayDays" : 90,
+    // The original event had nothing beyond this point, but we want to
+    // make device malfunction happen only when the number of devices on our
+    // electricity grid is greater than 1000, so only on big ships
+    "Min" : {
+        "Check" : true,
+        "GridSize" : 1000
+    }
+}

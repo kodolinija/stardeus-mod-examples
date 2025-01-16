@@ -1,0 +1,19 @@
+{
+    // Note, you can disable story events you don't like when starting a new game
+    // via Story Events modifiers by unchecking the checkboxes.
+    // And you can disable story events mid game using "story disable" console command
+    // How to do this: https://steamcommunity.com/app/1380910/discussions/0/3777993814848987718/#c3787002719317947245
+    "InterestFactor" : 0.1,
+    "Effect" : -0.3,
+    "ProbabilityBias" : -0.2,
+    "Flags" : [ "HeavyDisaster" ],
+    "MinRepeatDelayDays" : 1,
+    "Min" : {
+        "Check" : true,
+        // Setting an impossible condition to disable an event will work with "balanced" story generator only!
+        // Make sure you won't exceed the integer max value, or the number may overflow to negative
+        // and the effect will be the opposite. Max integer value: 2147483647
+        "Colonists" : 9999999,
+        "Days" : 1
+    }
+}
