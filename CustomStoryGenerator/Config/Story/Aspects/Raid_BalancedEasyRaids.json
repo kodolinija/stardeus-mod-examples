@@ -1,0 +1,23 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Raid",
+    "Properties" : [
+        { "Key" : "InitialExtraDelayDays", "Float" : 10 },
+        {
+            "Key" : "CombatStrengthRaidDelayDaysCurve",
+            // total colony strength => days till next random raid
+            "FloatSet" : [
+                0.0, 30.0,
+                1.0, 30.0,
+                2.0, 30.0,
+                3.0, 29.0,
+                5.0, 27.0,
+                10.0, 25.0,
+                20.0, 23.0,
+                50.0, 20.0,
+                300.0, 18.0
+            ]
+        }
+    ]
+}

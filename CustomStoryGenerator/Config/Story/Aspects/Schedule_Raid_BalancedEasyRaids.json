@@ -1,0 +1,24 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "Schedule",
+    // Variables for the schedule on / off
+    "Properties" : [
+        { "Key" : "Outcome", "String" : "Raid" },
+        { "Key" : "InitialExtraDelayDays", "Float" : 10.0 },
+        {
+            "Key" : "DaysCurve_On",
+            "FloatSet" : [
+                0.0, 2.0,
+                1.0, 3.0
+            ]
+        },
+        {
+            "Key" : "DaysCurve_Off",
+            "FloatSet" : [
+                0.0, 20.0,
+                1.0, 30.0
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "Id" : "Storygen_BalancedEasyRaids",
+    // Change this to true in order to share your mod on Steam Workshop.
+    // Also delete the SteamWorkshopItemId file that came with the example mod!
+    "SteamWorkshop" : true,
+    // Please create your own ModCover.jpg as well
+    "Name" : "Storygen: Balanced Easy Raids",
+    "Description" : "Balanced story generator with easier raids.",
+    "ModVersion" : "1.0.0",
+    "GameVersion" : "0.14.0"
+    // Uncomment if your mod depends on other mods.
+    // "Core" does not need to be defined as a dependency.
+    // "Dependencies" : [ "ModA", "ModB" ]
+}

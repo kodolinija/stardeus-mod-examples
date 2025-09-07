@@ -1,0 +1,40 @@
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "AspectId" : "PointAllowance",
+    // Variables for the schedule on / off
+    "Properties" : [
+        { "Key" : "Outcome", "String" : "Raid" },
+        { "Key" : "Multiplier", "Float" : 0.5 },
+        {
+            "Key" : "ColonistsCurve",
+            // Will load from Config/Curves/StoryPoints/Colonists_Balanced.json
+            "String" : "StoryPoints/Colonists"
+            // Or a direct FloatSet can go here. FloatSet will override String
+            // "FloatSet" : [
+            //     0.0, 0.0,
+            //     50.0, 20.0
+            // ]
+        },
+        {
+            "Key" : "WorkersCurve",
+            "String" : "StoryPoints/Workers"
+        },
+        {
+            "Key" : "EnergyCurve",
+            "String" : "StoryPoints/Energy"
+        },
+        {
+            "Key" : "DaysCurve",
+            "String" : "StoryPoints/Days"
+        },
+        {
+            "Key" : "NetWorthCurve",
+            "String" : "StoryPoints/NetWorth"
+        },
+        {
+            "Key" : "ShipClassPointsCurve",
+            "String" : "StoryPoints/ShipClassPoints"
+        }
+    ]
+}
