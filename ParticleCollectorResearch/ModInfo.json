@@ -1,0 +1,8 @@
+{
+    "Id" : "ParticleCollectorResearch",
+    "SteamWorkshop" : true,
+    "Name" : "Particle Collector Research",
+    "Description" : "Restores Particle Collector research",
+    "ModVersion" : "1.0.0",
+    "GameVersion" : "0.14.1"
+}

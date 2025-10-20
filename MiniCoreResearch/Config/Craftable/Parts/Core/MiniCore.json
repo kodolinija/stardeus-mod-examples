@@ -1,0 +1,15 @@
+{
+    "Type" : "Robotics3",
+    "ProductDefId" : "Obj/Parts/Core/MiniCore",
+    "ProductionTimeHours" : 36,
+    "EnergyCost" : 75,
+    "IgnoreMarket" : true,
+    "Ingredients" : [
+        { "TypeId" : "TitaniumPlate", "StackSize" : 1 },
+        { "TypeId" : "Transistor", "StackSize" : 20 },
+        { "TypeId" : "OpticalFiber", "StackSize" : 5 },
+        { "TypeId" : "Microchip3", "StackSize" : 3 },
+        { "TypeId" : "PlatinumIngot", "StackSize" : 3 },
+        { "TypeId" : "SiliconWafer", "StackSize" : 8 }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "Id" : "MiniCoreResearch",
+    "SteamWorkshop" : true,
+    "Name" : "Mini Core Research",
+    "Description" : "Restores Mini Core research",
+    "ModVersion" : "1.0.0",
+    "GameVersion" : "0.14.1"
+}

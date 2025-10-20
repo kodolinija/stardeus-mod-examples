@@ -1,0 +1,14 @@
+{
+    "target" : "Definitions/Obj/Parts/Core/MiniCore.json",
+    "operations" : [
+        {
+            "op" : "add",
+            "path" : "/Researchable",
+            "value" : {
+                "Prerequisites" : [
+                    "Research/Robotics/PartsAdvanced"
+                ]
+            }
+        }
+    ]
+}

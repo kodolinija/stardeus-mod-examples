@@ -1,0 +1,30 @@
+{
+    "Id" : "Research/Production/MaterialSynthesis",
+    "Tier" : 4,
+    "IsAbstract" : true,
+    "PreviewIcon" : "Icons/Color/Loading",
+    "Researchable" : {
+        "IsTreeNode" : true,
+        "Prerequisites" : [
+            "Research/Production/AssemblyAdvanced"
+        ],
+        "DatoidCosts" : [
+            {
+                "TypeId" : "DatoidSynthetic",
+                "StackSize" : 18
+            },
+            {
+                "TypeId" : "DatoidTechHigh",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidNuclear",
+                "StackSize" : 6
+            },
+            {
+                "TypeId" : "DatoidAlien",
+                "StackSize" : 4
+            }
+        ]
+    }
+}

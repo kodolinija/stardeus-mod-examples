@@ -1,0 +1,19 @@
+{
+    "target" : "Definitions/Objects/Devices/ParticleCollector.json",
+    "operations" : [
+        {
+            "op" : "replace",
+            "path" : "/SkipToolListing",
+            "value" : false
+        },
+        {
+            "op" : "add",
+            "path" : "/Researchable",
+            "value" : {
+                "Prerequisites" : [
+                    "Research/Production/MaterialSynthesis"
+                ]
+            }
+        }
+    ]
+}
