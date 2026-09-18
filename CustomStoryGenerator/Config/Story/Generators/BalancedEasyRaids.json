@@ -6,7 +6,10 @@
         "Schedule_Neutral_Balanced",
         "Schedule_Positive_Balanced",
         "Schedule_Negative_Balanced",
-        "Schedule_Raid_BalancedEasyRaids",
+        // The raid schedule is not customized: the Raid aspect (Raid_BalancedEasyRaids)
+        // opens the raid window by itself when its own cooldown expires, so raid
+        // frequency is tuned there.
+        "Schedule_Raid_Balanced",
 
         // Assigns story points
         "PointAllowance_Neutral_Balanced",

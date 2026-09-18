@@ -26,11 +26,11 @@
         },
         {
             "Key" : "DaysCurve",
-            "String" : "StoryPoints/Days"
+            "String" : "StoryPoints/RaidDays"
         },
         {
             "Key" : "NetWorthCurve",
-            "String" : "StoryPoints/NetWorth"
+            "String" : "StoryPoints/RaidNetWorth"
         },
         {
             "Key" : "ShipClassPointsCurve",

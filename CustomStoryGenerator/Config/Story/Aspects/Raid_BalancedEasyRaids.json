@@ -3,21 +3,44 @@
     // Multiple configurations can point to a single implementation.
     "AspectId" : "Raid",
     "Properties" : [
+        // Extra days added on top of the first rolled delay of a new game
+        // (6 in the original Raid_Balanced)
         { "Key" : "InitialExtraDelayDays", "Float" : 10 },
         {
-            "Key" : "CombatStrengthRaidDelayDaysCurve",
-            // total colony strength => days till next random raid
+            "Key" : "RaidDelayDaysCurve",
+            // Colony wealth (millions) => mean days till the next scheduled raid.
+            // Real colonies sit between ~1M (early) and ~50M (endgame).
+            // These are the original Raid_Balanced values multiplied by 2, so raids
+            // come half as often.
+            // Note: before v0.15 this was "CombatStrengthRaidDelayDaysCurve", keyed on colony
+            // combat strength. The game ignores that key now and falls back to a fixed 9 day
+            // delay if "RaidDelayDaysCurve" is missing!
             "FloatSet" : [
-                0.0, 30.0,
-                1.0, 30.0,
-                2.0, 30.0,
-                3.0, 29.0,
-                5.0, 27.0,
-                10.0, 25.0,
-                20.0, 23.0,
-                50.0, 20.0,
-                300.0, 18.0
+                0.0,    28.0,
+                1.0,    26.6,
+                3.0,    25.2,
+                10.0,   22.4,
+                30.0,   19.6,
+                100.0,  16.8,
+                300.0,  14.0,
+                1000.0, 12.6
             ]
-        }
+        },
+        // The rest is unchanged from the original Raid_Balanced. These all have defaults,
+        // they are listed here to show what can be tuned.
+
+        // Rolled delay = mean x Range(1 - jitter, 1 + jitter)
+        { "Key" : "RaidDelayJitter", "Float" : 0.35 },
+        // Scheduled raids' strength is multiplied by Range(1 - jitter, 1 + jitter)
+        { "Key" : "RaidStrengthJitter", "Float" : 0.15 },
+        // Calm-before-the-storm skip mechanic:
+        // chance (0-1) that a skip slot actually suppresses the raid
+        { "Key" : "RaidSkipChance", "Float" : 0.5 },
+        // raids between consecutive skip slots (inclusive range)
+        { "Key" : "RaidSkipIntervalMin", "Float" : 2 },
+        { "Key" : "RaidSkipIntervalMax", "Float" : 3 },
+        // strength multiplier applied to the raid immediately after a skip
+        { "Key" : "RaidStormMulMin", "Float" : 1.15 },
+        { "Key" : "RaidStormMulMax", "Float" : 1.25 }
     ]
 }
