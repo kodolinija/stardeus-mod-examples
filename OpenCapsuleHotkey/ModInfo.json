@@ -1,0 +1,10 @@
+{
+    // If you'll want to share this mod on Steam Workshop, change the ID!
+    "Id" : "OpenCapsuleHotkey",
+    "Name" : "Open Capsule Hotkey",
+    "Description" : "Example of a code mod that adds a rebindable key binding (default: G) for opening the selected storage capsules.",
+    // Set this to "true" to enable the "Upload to Steam Workshop" button
+    "SteamWorkshop" : false,
+    "ModVersion" : "1.0.0",
+    "GameVersion" : "0.15.0"
+}
