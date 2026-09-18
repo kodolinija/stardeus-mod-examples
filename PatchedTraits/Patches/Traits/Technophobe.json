@@ -1,0 +1,20 @@
+{
+    "target" : "Config/Traits/Defs/Technophobe.json",
+    "operations" : [
+        {
+            "op" : "remove",
+            "path" : "/AddsStatModifiers[Component=AIAlignment]"
+        },
+        {
+            "op" : "add",
+            "path" : "/AddsStatModifiers/-",
+            "value" : {
+                "Component" : "Sanity",
+                "Properties" : [
+                    { "Key" : "Value", "Float" : -0.2 },
+                    { "Key" : "Type", "String" : "AddsPercent" }
+                ]
+            }
+        }
+    ]
+}
