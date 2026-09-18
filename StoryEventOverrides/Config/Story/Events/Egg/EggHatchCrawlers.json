@@ -1,0 +1,31 @@
+// This is an example of how to make a story event happen more frequently,
+// and how to change its requirements.
+// Original: Core/Config/Story/Events/Egg/EggHatchCrawlers.json
+{
+    // C# implementation id.
+    // Multiple configurations can point to a single implementation.
+    "EventId": "EggHatchCrawlers",
+    // How much does this story event cost to run
+    "Points": 7,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "OnDemand",
+        "Egg"
+    ],
+    // Rarity was not defined in the original event, hence it was 1.0 (normal).
+    // 2.0 is common, 0.5 is rare. It cannot be 0, that would revert it to 1.0.
+    // We will set it to 2.0, making crawlers hatch from eggs more often
+    // compared to the other egg events
+    "Rarity": 2.0,
+    // Full list of requirements can be found in Situation class
+    "Require": {
+        // Original min days was 30, we'll comment it out so this condition will
+        // not exist
+        // "Days": 30
+
+        // We will add minimum required number of "Colonists" instead
+        "Colonists": 10
+    }
+}

@@ -1,0 +1,38 @@
+// This is an example of how to disable a story event with an override.
+// The file must be in the same location as the original one in the Core mod:
+// Core/Config/Story/Events/Main/EngineFailure.json
+// An override replaces the whole file, so everything you do not want to change
+// has to be copied from the original.
+//
+// Note, you can disable story events you don't like when starting a new game
+// via Story Events modifiers by unchecking the checkboxes.
+// And you can disable story events mid game using "story disable" console command
+// How to do this: https://steamcommunity.com/app/1380910/discussions/0/3777993814848987718/#c3787002719317947245
+{
+    // C# implementation id
+    "EventId": "EngineFailure",
+    // How much does this story event cost to run
+    "Points": 15,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "HeavyDisaster",
+        "Annoying",
+        "Punishing",
+        "Explosion"
+    ],
+    // Minimum days before this event can repeat
+    "MinRepeatDelayDays": 90,
+    "MaxOngoingDays" : 30,
+    // Requirements for this event to be available
+    "Require": {
+        "Difficulty": 0.25,
+        "GridSize": 100,
+        "Days": 21,
+        // Setting an impossible condition to disable an event will work with "balanced" story generator only!
+        // Make sure you won't exceed the integer max value, or the number may overflow to negative
+        // and the effect will be the opposite. Max integer value: 2147483647
+        "Colonists": 9999999
+    }
+}

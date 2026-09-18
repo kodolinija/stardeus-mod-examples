@@ -1,0 +1,30 @@
+// This is an example of how to make a story event happen less frequently,
+// and only on big ships.
+// Original: Core/Config/Story/Events/Main/DeviceMalfunction.json
+{
+    // C# implementation id
+    "EventId": "DeviceMalfunction",
+    // How much does this story event cost to run
+    "Points": 18,
+    // Options: Negative, Positive, Neutral, Raid
+    "OutcomeType": "Negative",
+    // Full list is in StoryEventFlags class
+    "EventFlags": [
+        "Device",
+        "Annoying",
+        "Punishing",
+        "Explosion"
+    ],
+    // MinRepeatDelayDays was 110 in the original, we want this to happen less
+    // frequently, so we'll set this to 300
+    "MinRepeatDelayDays": 300,
+    // Full list of requirements can be found in Situation class
+    "Require": {
+        "Days": 30,
+        "Difficulty": 0.25,
+        // The original event required 80 devices on the electricity grid. We want
+        // device malfunction to happen only when the number of devices is
+        // greater than 1000, so only on big ships
+        "GridSize": 1000
+    }
+}
